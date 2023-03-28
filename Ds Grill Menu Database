@@ -1,0 +1,31 @@
+--Create a restaurant menu database--
+
+CREATE TABLE DGrill (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+INSERT INTO DGrill VALUES (1, "hot dogs", 4);
+INSERT INTO DGrill VALUES (2, "sliders", 7);
+INSERT INTO DGrill VALUES (3, "chicken wings", 10);
+INSERT INTO DGrill VALUES (4, "nachos", 7);
+INSERT INTO DGrill VALUES (5, "fries", 2);
+INSERT INTO DGrill VALUES (7, "water", 2);
+INSERT INTO DGrill VALUES (9, "chicken tenders", 12);
+INSERT INTO DGrill VALUES (10, "sausage and peppers", 8);
+INSERT INTO DGrill VALUES (11, "meatballs", 5);
+INSERT INTO DGrill VALUES (12, "snackwrap", 6);
+INSERT INTO DGrill VALUES (13, "steak and cheese", 8);
+INSERT INTO DGrill VALUES (14, "sweet potato fries", 4);
+INSERT INTO DGrill VALUES (15, "add chili", 1);
+
+--Retrieve menu--
+
+SELECT * FROM DGrill;
+
+--What is the AVG price of the items on the menu?--
+
+SELECT AVG (price) FROM DGrill GROUPBY;
+
+--What is the total price of all of the menu items listed?--
+
+SELECT SUM (price) FROM DGrill GROUPBY;
+
+--List items on menu ordered by lowest to highest price--
+SELECT * FROM DGrill WHERE price ORDER BY price desc;
