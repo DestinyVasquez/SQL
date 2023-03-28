@@ -1,0 +1,38 @@
+-- Create a data base with three tables about actors-- 
+
+--The first table shows actors and where they're from--
+CREATE TABLE actors_from
+(id INTEGER PRIMARY KEY AUTOINCREMENT, actors TEXT, location TEXT);
+INSERT INTO actors_from VALUES (1, "Angelina Jolie", "CA");
+INSERT INTO actors_from VALUES (2, "Brad Pitt", "CA");
+INSERT INTO actors_from VALUES (3,"Matt Dillon", "NY");
+INSERT INTO actors_from VALUES (4,"Cameron Diaz", "NY");
+SELECT * FROM actors_from;
+
+--The second table shows actors and which movies they were in--
+CREATE TABLE movies
+(id INTEGER PRIMARY KEY AUTOINCREMENT, actors TEXT, movie TEXT);
+INSERT INTO movies VALUES (1, "Angelina Jolie", "wanted");
+INSERT INTO movies VALUES (2, "Brad Pitt", "deadpool");
+INSERT INTO movies VALUES (3,"Matt Dillon", "the_outsiders");
+INSERT INTO movies VALUES (4,"Cameron Diaz", "my_sisters_keeper");
+SELECT * FROM movies;
+
+--The third table is actors and who they have dated in the past--
+CREATE TABLE dated_past
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+female TEXT, male TEXT, dated INTEGER);
+INSERT INTO dated_past VALUES (1, "Angelina Jolie", "Brad Pitt", 2005);
+INSERT INTO dated_past VALUES (2, "Matt Dillon", "Cameron Diaz", 1995);
+SELECT * FROM dated_past;
+
+--Show actors name, where they're from and what movie they were in--
+SELECT actors_from.actors, actors_from.location, movies.movie FROM actors_from
+JOIN movies
+ON actors_from.actors = movies.actors;
+
+
+
+
+
+
