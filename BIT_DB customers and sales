@@ -1,7 +1,4 @@
-SELECT * FROM BIT_DB.customers LIMIT 20;
-SELECT * FROM BIT_DB.JanSales LIMIT 20;
-SELECT * FROM BIT_DB.customers;
-SELECT * FROM BIT_DB.JanSales;
+#In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
 #1 How many orders were placed in January?
 SELECT COUNT * orderID FROM BIT_DB.JanSales
